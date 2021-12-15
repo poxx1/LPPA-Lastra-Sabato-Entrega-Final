@@ -1,0 +1,63 @@
+﻿
+@{ ViewBag.Title = "Index";
+   Layout = "~/Views/Shared/_AdminLayout.cshtml"; }
+
+<h2 style="text-align:center">Lastra Market - Admin view</h2>
+<br />
+<br />
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <i class="bi bi-shop" style="text-align:center; font-size: 4rem;"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Productos</h5>
+                    <h3 class="card-text">Cantidad : @ViewBag.CantProductos</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <i class="bi bi-people" style="text-align:center; font-size: 4rem;"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Usuarios</h5>
+                    <h3 class="card-text">Cantidad : @ViewBag.CantUsuarios</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <i class="bi bi-bag" style="text-align:center; font-size: 4rem;"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Categorias Producto</h5>
+                    <h3 class="card-text">Cantidad : @ViewBag.CantCategoriasProducto</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <i class="bi bi-receipt" style="text-align:center; font-size: 4rem;"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Orders</h5>
+                    <h3 class="card-text">Cantidad : @ViewBag.CantOrders</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <i class="bi bi-cart" style="text-align:center; font-size: 4rem;"></i>
+                <div class="card-body">
+                    <h5 class="card-title">Carritos</h5>
+                    <h3 class="card-text">Cantidad : @ViewBag.CantCarritos</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+
+        </div>
+    </div>
+</div>

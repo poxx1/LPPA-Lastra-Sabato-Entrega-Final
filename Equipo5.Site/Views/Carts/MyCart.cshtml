@@ -1,0 +1,66 @@
+﻿@model IEnumerable<MKT.Entities.Models.CartItem>
+@{ 
+    ViewBag.Title = "MyCart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="text-center">Mi Carrito</h2>
+        </div>
+    </div>
+    @Html.Hidden("hiddenIdtoDelete")
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+            <thead>
+                <tr>
+                    <th>Descripcion</th>
+                    <th>Precio Unitario</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+    <tr id="row_@item.ProductId">
+        <td style="vertical-align: inherit;">
+            @Html.DisplayFor(itemModel => item.Product.Descripcion)
+        </td>
+        <td style="vertical-align: inherit;">
+            $@Html.DisplayFor(itemModel => item.Product.Precio)
+        </td>
+        <td style="vertical-align: inherit;">
+            <a class="btn btn-primary" href="@Url.Action("ItemCart", "Carts", new { idProduct = item.ProductId, cantidad = item.Cantidad - 1 })"><i class="fas fa-minus"></i></a>
+            @Html.DisplayFor(itemModel => item.Cantidad, new { @id = "cant_" + item.ProductId })
+            <a class="btn btn-primary" href="@Url.Action("ItemCart", "Carts", new { idProduct = item.ProductId, cantidad = item.Cantidad + 1 })"><i class="fas fa-plus"></i></a>
+        </td>
+        <td style="vertical-align: inherit;">
+            @{ var precio = item.Product.Precio * item.Cantidad; }
+            $@precio
+        </td>
+        <td class="float-right">
+            <a class="btn btn-danger" style="font-size: 1rem;" href="@Url.Action("DeleteItemCart","Carts",new { idProduct = item.ProductId })"><i class="fas fa-trash-alt"></i></a>
+        </td>
+    </tr>}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th>Total</th>
+                    <th>$@ViewBag.PrecioTotal</th>
+                </tr>
+            </tfoot>
+        </table>
+        <div style="width: 170px; float: right;">
+            <a href="@Url.Action("Index","Home")" class="btn btn-danger">Volver</a>
+            <a href="@Url.Action("CheckOut","Carts")" class="btn btn-success">Comprar</a>
+        </div>
+    </div>
+    <br />
+</div>
+

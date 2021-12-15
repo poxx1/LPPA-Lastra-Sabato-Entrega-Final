@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Artshop</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+
+@{bool isAdmin = User.IsInRole("Admin"); }
+<body>
+    <div class="contenedor">
+        <header class="cabecera">
+		<a href="/Carts/Index"><img class="icon2" src="/Content/image/cart2.png"></a></>
+            <h1 id="titulo"> ArtShop</h1>
+
+
+            <p id="subtitulo">Galeria de Arte</p>
+
+            <nav>
+    
+                    <div class="menu" id="par">
+                        <a href="~/Home/Index">
+                            <img class="icon" src="~/Content/image/bakery.png">
+                        </a>
+                        <p class="texto">Catalogo de Cuadros</p>
+                        <ul>
+                            <a id="Reserva_Item1" class="texto" href="~/Reserva/Index"></a>
+                        </ul>
+                    </div>
+
+				@if (isAdmin)
+				{
+
+                    <div class="menu" id="impar">
+                        <a href="~/Artist/Index">
+                            <img class="icon" src="~/Content/image/icon2.png">
+                        </a>
+                        <p class="texto">ABM</p>
+                        <ul>
+                             <li>
+                                <a href="/ABM/AltaArtistasView" class="menu_genero">
+                            <li>
+                                <a href="/Artist/Index" class="menu_genero"></a>
+                            </li>
+                        </ul>
+                    </div>
+				}
+                    <div class="menu" id="par">
+                        <a href="~/Home/Nosotros">
+                            <img class="icon" src="~/Content/image/icon3.png">
+                        </a>
+                        <p class="texto">Quienes somos</p>
+
+                    </div>
+				
+				@if (isAdmin)
+				{
+
+                    <div class="menu" id="impar">
+                        <a href="~/Product/IndexProduct">
+                            <img class="icon" src="~/Content/image/icon4.png">
+                        </a>
+                        <p class="texto">Cuadros</p>
+                    </div>
+
+				}
+                    @Html.Partial("_LoginPartial")
+
+            </nav>
+
+
+        </header>
+        <div class="datagrid">
+            <div class="tabla">
+                <section>
+
+                    @RenderBody()
+
+                </section>
+
+            </div>
+                <aside>
+                    <div class="lateral">
+                        <p class=" texto"> Cuadros Destacados </p>
+                        <table>
+                            <tbody id="imagenes">
+                                <tr>
+                                    <td div class="imagenes"><a href="~/Home/Index"><img src="~/Content/image/1.jpg"></a></td>
+                                </tr>
+                                <tr>
+                                    <td div class="imagenes"><a href="~/Home/Index"><img src="~/Content/image/2.jpg"></a></td>
+                                </tr>
+                                <tr>
+                                    <td div class="imagenes"><a href="~/Home/Index"><img src="~/Content/image/3.jpg"></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </aside>
+         
+        </div>
+
+        <footer class="pie">
+            <p>  &copy; @DateTime.Now.Year - Copyright Universidad Abierta Interamericana </p>
+        </footer>
+
+    </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿@model MKT.Entities.Models.Rol
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="text-center">Crear Nuevo Rol</h2>
+
+@using (Html.BeginForm("Create", "Rol"))
+{
+    <div class="form-horizontal">
+        <hr />
+        <div class="form-group">
+            @Html.Label("Nombre", new { @class = "control-label col-md-2", @id = "colorNaranja" })
+            <div class="col-md-10">
+                <div class="input-group">
+                    @Html.TextBoxFor(x => x.Nombre, new { @placeholder = "Nombre", @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(model => model.Nombre)
+
+            </div>
+        </div>
+        <div class="float-right">
+            <a href="@Url.Action("Index","Rol")" class="btn btn-danger">Volver</a>
+            <button type="submit" class="btn btn-primary">Aceptar</button>
+        </div>
+    </div>
+}

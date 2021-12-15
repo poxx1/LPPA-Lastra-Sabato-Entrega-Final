@@ -1,0 +1,80 @@
+﻿@model MKT.Entities.Models.Order
+
+@{
+    ViewBag.Title = "CheckOut";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>CheckOut</h2>
+
+
+@using (Html.BeginForm("CheckOut", "Carts", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+<div class="form-horizontal">
+    <h4>User</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.Id)
+
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Usuario.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.Usuario.Nombre, new { @placeholder = "Nombre", @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Usuario.Apellido, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.Usuario.Apellido, new { @placeholder = "Apellido", @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Usuario.Documento, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.Usuario.Documento, new { @placeholder = "Documento", @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Usuario.Telefono, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.Usuario.Telefono, new { @placeholder = "Telefono", @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Usuario.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.Usuario.Email, new { @placeholder = "Email", @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="col-md-10">
+        @Html.LabelFor(model => model.Direccion, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="input-group">
+            @Html.DropDownListFor(model => model.DireccionId, (SelectList)ViewBag.ListadoDirecciones, "Selecciona Direccion", new { @class = "form-control" })
+        </div>
+    </div>
+
+</div>
+
+    <div>
+        <a href="@Url.Action("MyCart", "Carts")">Volver a mi carrito</a>
+    </div>
+    <div>
+        <button type="submit" class="btn btn-success">Comprar</button>
+        @*<a href="@Url.Action("CheckOut","Carts")" class="btn btn-success">Comprar</a>*@
+    </div>
+
+@section Scripts 
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+}
+
+
+
+

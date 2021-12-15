@@ -1,0 +1,102 @@
+﻿@model MKT.Entities.Models.Address
+<head>
+    <link href="~/Content/LogIn/EstiloLogin.css" rel="stylesheet" />
+
+</head>
+
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-5 mx-auto">
+
+            <div class="myform form">
+                <div class="logo mb-3">
+                    <div class="col-md-12 text-center">
+
+
+                        <h1>Registro de Dirección</h1>
+                        <img src="~/Content/User/user-plus.svg" width="50" height="50" />
+                        <br />
+                        <hr />
+                    </div>
+                </div>
+
+                @using (Html.BeginForm())
+                {
+                    <div class="form-horizontal">
+
+                        <div class="form-group">
+                            <span>
+                                <img src="~/Content/User/building.svg" />
+                            </span>
+                            @Html.LabelFor(model => model.DireccionCompleta, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.DireccionCompleta, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.DireccionCompleta, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <span>
+                                <img src="~/Content/User/geo-alt-fill.svg" />
+                            </span>
+                            @Html.LabelFor(model => model.Localidad, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Localidad, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Localidad, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <span>
+                                <img src="~/Content/User/card.svg" />
+                            </span>
+                            @Html.LabelFor(model => model.CodigoPostal, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.CodigoPostal, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.CodigoPostal, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <span>
+                                <img src="~/Content/User/signpost-fill.svg" />
+                            </span>
+                            @Html.LabelFor(model => model.Provincia, htmlAttributes: new { @class = "control-label col-md-6" })
+                            <div class="col-md-10">
+
+                                @Html.EditorFor(model => model.Provincia, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Provincia, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <br />
+                        <hr />
+
+                        <div class="col-md-12 text-center ">
+                            @ViewBag.Mensaje
+                            <button type="submit" class="btn btn-block mybtn btn-primary tx-tfm">Registrar</button>
+                        </div>
+                    </div>}
+
+                <hr />
+                <div>
+                    <span>
+                        <img src="~/Content/User/box-arrow-in-left.svg" />
+                    </span>
+                    <a href="~/User/UserProfile">Regresar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+

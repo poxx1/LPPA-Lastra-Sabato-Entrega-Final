@@ -1,0 +1,84 @@
+﻿@model IEnumerable<MKT.Entities.Models.Rol>
+@{ ViewBag.Title = "Index";
+                Layout = "~/Views/Shared/_AdminLayout.cshtml"; }
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="text-center">Roles</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <a class="float-right" style="font-size: 2rem;" href="@Url.Action("Create", "Rol")"><i class="bi bi-plus-circle-fill"></i></a>
+        </div>
+    </div>
+    <br />
+
+</div>
+@Html.Hidden("hiddenIdtoDelete")
+<div class="table-responsive">
+    <table class="table table-striped table-sm">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+<tr id="row_@item.Id">
+    <td style="vertical-align: inherit;">
+        @Html.DisplayFor(itemModel => item.Nombre)
+    </td>
+    <td class="float-right">
+        <a class="btn btn-info" style="font-size: 1rem;" href="@Url.Action("Edit", "Rol", new { id = item.Id})"><i class="bi bi-pencil-square"></i></a>
+        <a class="btn btn-danger" style="font-size: 1rem;" href="#" onclick="confirmDelete(@item.Id)"><i class="bi bi-trash"></i></a>
+    </td>
+</tr>            }
+        </tbody>
+    </table>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myDeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!--<h5 class="modal-title" id="exampleModalLabel">Eliminar Rol</h5>
+
+    </div>
+    <div class="modal-body">
+        <h6>Esta seguro de querer eliminar el rol ?</h6>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" onclick="deleteRol()">Aceptar</button>
+            -->
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script type="text/javascript">var confirmDelete = function (rolId) {
+            $("#hiddenIdtoDelete").val(rolId);
+            $("#myDeleteModal").modal('show');
+        }
+
+        var deleteRol = function () {
+            var rolId = $("#hiddenIdtoDelete").val();
+            $.ajax({
+                type: "POST",
+                url: "/Rol/Delete",
+                data: { id: rolId },
+                success: function (result) {
+                    $("#myDeleteModal").modal('hide');
+                    $("#row_" + rolId).remove();
+                }
+            })
+        }</script>
+}
+

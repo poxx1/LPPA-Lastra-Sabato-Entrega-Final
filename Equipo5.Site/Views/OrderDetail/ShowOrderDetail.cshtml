@@ -1,0 +1,46 @@
+﻿@model IEnumerable<MKT.Entities.Models.OrderDetail>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ShowOrderDetail</title>
+</head>
+<body>
+<table class="table">
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Producto.Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cantidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Producto.Precio)
+            </th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Producto.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cantidad)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Producto.Precio)
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

@@ -1,0 +1,178 @@
+﻿@model MKT.Entities.Models.User
+
+<head>
+    <link href="~/Content/LogIn/EstiloLogin.css" rel="stylesheet" />
+
+</head>
+
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-5 mx-auto">
+
+            <div class="myform form ">
+                <div class="logo mb-3">
+                    <div class="col-md-12 text-center">
+
+
+                        <h1>Nuevo Registro</h1>
+                        <img src="~/Content/User/user-plus.svg" width="50" height="50" />
+                        <br />
+                        <hr />
+                    </div>
+                </div>
+
+                @using (Html.BeginForm())
+                {
+
+
+    <div class="form-horizontal">
+
+        <div class="form-group">
+            <span>
+                <img src="~/Content/User/person.svg" />
+            </span>
+            @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <span>
+                <img src="~/Content/User/person.svg" />
+            </span>
+            @Html.LabelFor(model => model.Apellido, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Apellido, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Apellido, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <span>
+                <img src="~/Content/User/card.svg" />
+            </span>
+            @Html.LabelFor(model => model.Documento, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Documento, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Documento, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            <span>
+                <img src="~/Content/User/calendar.svg" />
+            </span>
+            @Html.LabelFor(model => model.FechaNacimiento, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-10">
+
+                @Html.EditorFor(model => model.FechaNacimiento, new { htmlAttributes = new { @class = "form-control datepicker", Value = DateTime.Now.ToShortDateString(), @type = "date" } })
+                @Html.ValidationMessageFor(model => model.FechaNacimiento, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            <span>
+                <img src="~/Content/User/tele.svg" />
+            </span>
+            @Html.LabelFor(model => model.Telefono, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Telefono, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Telefono, "", new { @class = "text-danger" })
+
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <span>
+                <img src="~/Content/User/mail.svg" />
+            </span>
+            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <span>
+                <img src="~/Content/User/mail.svg" />
+            </span>
+            @Html.LabelFor(model => model.Email_, htmlAttributes: new { @class = "control-label col-md-4" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Email_, new { htmlAttributes = new { @class = "form-control" } })
+
+                @Html.ValidationMessageFor(model => model.Email_, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+
+
+        <div class="form-group">
+            <span>
+                <img src="~/Content/User/file-lock.svg" />
+            </span>
+            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            <span>
+                <img src="~/Content/User/file-lock-fill.svg" />
+            </span>
+            @Html.LabelFor(model => model.Password_, htmlAttributes: new { @class = "control-label col-md-4" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Password_, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Password_, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <br />
+        <hr />
+
+        <div class="col-md-12 text-center ">
+            @ViewBag.Mensaje
+            <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Registrar</button>
+        </div>
+    </div>}
+
+                <hr />
+                <div>
+                    <span>
+                        <img src="~/Content/User/box-arrow-in-left.svg" />
+                    </span>
+                    <a href="/Home/Index">Regresar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+

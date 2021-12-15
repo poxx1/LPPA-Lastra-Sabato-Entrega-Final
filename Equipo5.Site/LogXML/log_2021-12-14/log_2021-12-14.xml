@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<logger>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogOut</Controller>
+    <Date>14/12/2021 22:58:10</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>14/12/2021 22:58:54</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>14/12/2021 23:02:57</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogOut</Controller>
+    <Date>14/12/2021 23:03:50</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>14/12/2021 23:03:54</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+</logger>

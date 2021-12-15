@@ -1,0 +1,120 @@
+﻿@model MKT.Site.ViewModels.ViewModelChangePass
+
+
+
+
+<head>
+
+
+    <link href="~/Content/LogIn/EstiloLogin.css" rel="stylesheet" />
+
+
+</head>
+
+
+<body>
+    <div class="container">
+
+
+
+
+
+        <div class="row justify-content-md-center">
+
+
+            <div class="col-md-12">
+
+
+                <a class="btn btn-primary" href="~/User/UserProfile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-file-person" viewBox="0 0 20 20">
+                        <path d="M12 1a1 1 0 0 1 1 1v10.755S12 11 8 11s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h8zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z" />
+                        <path d="M8 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    </svg>Ver Datos de Usuario
+                </a>
+
+
+
+                <a class="btn btn-primary" href="~/Home/Index">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-box-arrow-in-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0v-2z" />
+                        <path fill-rule="evenodd" d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z" />
+                    </svg>Regresar al Market
+                </a>
+            </div>
+
+        </div>
+
+        <br />
+
+
+        <div class="myform form">
+
+            <div class="row">
+
+                <div class="col-md-12  admin-content" id="profile">
+                    <div class="panel panel-info" style="margin: 1em;">
+                        <div class="panel-heading-CP">
+                            <h3 class="panel-title-CP">Cambio de Contraseña</h3>
+
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+
+
+                    <form action=" " method="post">
+                        <div class="form-group">
+
+                            <div class="col-md-12  admin-content" id="profile">
+                                <div class="panel panel-info" style="margin: 1em;">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Nueva Contraseña</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="col-md-12  admin-content" id="profile">
+                                <div class="panel panel-info" style="margin: 1em;">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Re Ingrese Contraseña</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        @Html.EditorFor(model => model.Password_, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Password_, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+
+                                <div class="col-md-12">
+                                    <input type="submit" value="Modificar" class="btn1" />
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+</body>

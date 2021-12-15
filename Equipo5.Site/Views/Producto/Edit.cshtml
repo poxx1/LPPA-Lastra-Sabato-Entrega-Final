@@ -1,0 +1,92 @@
+﻿@model MKT.Entities.Models.Product
+@{ ViewBag.Title = "Edit";
+                Layout = "~/Views/Shared/_AdminLayout.cshtml"; }
+
+<h2 class="text-center">Actualizar Producto</h2>
+
+@using (Html.BeginForm("Edit", "Producto", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+<div class="form-horizontal">
+    <hr />
+    <div class="form-group">
+        @Html.Label("Descripción", new { @class = "control-label col-md-2", @id = "colorNaranja" })
+        <div class="col-md-10">
+            <div class="input-group">
+                @Html.TextBoxFor(x => x.Descripcion, new { @placeholder = "Descripcion", @class = "form-control" })
+            </div>
+            @Html.ValidationMessageFor(model => model.Descripcion)
+        </div>
+        @Html.Label("Codigo de Barra", new { @class = "control-label col-md-2", @id = "colorNaranja" })
+        <div class="col-md-10">
+            <div class="input-group">
+                @Html.TextBoxFor(x => x.CodigoBarra, new { @placeholder = "Codigo de Barra", @class = "form-control" })
+            </div>
+            @Html.ValidationMessageFor(model => model.CodigoBarra)
+        </div>
+        @Html.Label("Precio", new { @class = "control-label col-md-2", @id = "colorNaranja" })
+        <div class="col-md-10">
+            <div class="input-group">
+                @Html.TextBoxFor(x => x.Precio, new { @placeholder = "Precio", @class = "form-control" })
+            </div>
+            @Html.ValidationMessageFor(model => model.Precio)
+        </div>
+        @Html.Label("Stock", new { @class = "control-label col-md-2", @id = "colorNaranja" })
+        <div class="col-md-10">
+            <div class="input-group">
+                @Html.TextBoxFor(x => x.StockActual, new { @placeholder = "Stock", @class = "form-control" })
+            </div>
+            @Html.ValidationMessageFor(model => model.StockActual)
+        </div>
+        @Html.Label("Categoria Producto", new { @class = "control-label col-md-2", @id = "colorNaranja" })
+        <div class="col-md-10">
+            <div class="input-group">
+                @Html.DropDownListFor(x => x.CategoryId, (SelectList)ViewBag.ListadoCategorias, "--Selecciona Categoria--", new { @class = "form-control" })
+            </div>
+            @Html.ValidationMessageFor(model => model.CategoryId)
+        </div>
+        @Html.Label("Imagen Producto", new { @class = "control-label col-md-2", @id = "colorNaranja" })
+        <div class="col-md-10">
+            <div class="input-group" style="display: flex; flex-direction: column">
+                <input type="file" name="imagenProducto" id="fuimage" onchange="showpreview(this);" class="form-control" style="padding-bottom: 5px;" />
+                @{
+                    var base64 = Convert.ToBase64String(Model.FotoProducto);
+                    var imgSrc = string.Format("data:image/jpg;base64,{0}", base64);
+                }
+                <img id="imgdatabase" src="@imgSrc" style="max-width:300px;max-height:300px;" />
+                <img id="imgpreview"  src="" style="border-width: 0px; display: none; max-width:300px;max-height:300px;" />
+            </div>
+        </div>
+        <br />
+        <div class="col-md-10 text-center">
+
+        </div>
+    </div>
+    <div class="float-right">
+        <a href="@Url.Action("Index","Producto")" class="btn btn-danger">Volver</a>
+        <button type="submit" class="btn btn-primary">Aceptar</button>
+    </div>
+</div>
+
+@section Scripts
+{        
+
+    <script type="text/javascript">
+        function showpreview(input) {
+            if (input.files && input.files[0])
+            {
+
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#imgpreview').css('display', 'initial');
+                    $('#imgpreview').attr('src', e.target.result);
+
+                    $('#imgdatabase').css('display', 'none');
+
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+
+        }
+    </script>
+}
+}

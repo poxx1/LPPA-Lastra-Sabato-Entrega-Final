@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Lobster&family=Oswald:wght@300&family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="~/Content/site.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/c26cd2166c.js"></script>
+
+</head>
+<body>
+
+        <div class="navbar">
+            <a href="~/Home/Index" class="navbar__logo">UAI</a>
+            <nav>
+                <ul>
+                    <li><a href=" @Url.Action("Index", "Home")">Home</a></li>
+
+                    <li><a href="@Url.Action("Index","Catalog")">Catalogo</a></li>
+
+                    @{
+                        if (User.IsInRole("Administrador"))
+                        {
+
+                            <li><a href="@Url.Action("Index", "Admin")">Panel Admin</a></li>
+
+                        }
+                        //if (User.IsInRole("Administrador") && User.Identity.IsAuthenticated)
+                        if (User.Identity.IsAuthenticated)
+                        {
+
+                            <li><a href="@Url.Action("MisCompras", "Carts")">Mis Compras</a></li>
+
+                        }
+                    }
+
+                    <li>
+                        <a href="@Url.Action("MyCart", "Carts")">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                            </svg>Carrito
+                        </a>
+                    </li>
+
+                    @if (!User.Identity.IsAuthenticated)
+                    {
+                        <li><a href="~/Auth/LogIn" role="button">Ingresar</a></li>
+                    }
+                    else
+                    {
+                        <li><a href="@Url.Action("LogOut", "Auth")" role="button">Salir</a></li>
+
+                    }
+
+                    @if (!User.Identity.IsAuthenticated)
+                    {
+                        <li><a href="~/User/UserRegister" role="button">Registrate</a></li>
+
+                    }
+
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li>
+                            <a href="~/User/UserProfile">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                                    <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"></path>
+                                </svg>
+                                @User.Identity.Name
+
+                            </a>
+                        </li>
+                    }
+                </ul>
+
+            </nav>
+
+        </div>
+
+<section>@RenderBody()</section>
+
+
+
+    <!-- =========================================== -->
+
+    <section>
+        <div>
+            <hr />
+            <p class="text-center">Lastra MKT LPPA 2021 </p>
+        </div>
+    </section>
+
+    @RenderSection("scripts", required: false)
+    <script src="~/Scripts/jquery-3.6.0.min.js" />
+
+</body>
+</html>

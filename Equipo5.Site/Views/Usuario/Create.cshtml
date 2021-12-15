@@ -1,0 +1,73 @@
+﻿@model MKT.Entities.Models.User
+@{ ViewBag.Title = "Create";
+                Layout = "~/Views/Shared/_AdminLayout.cshtml"; }
+
+<h2 class="text-center">Crear Nuevo Usuario</h2>
+
+@using (Html.BeginForm("Create", "Usuario"))
+{
+<div class="form-horizontal">
+    <hr />
+    <div class="form-group">
+        @Html.Label("Nombre", new { @class = "control-label col-md-2", @id = "colorNaranja" })
+        <div class="col-md-10">
+            <div class="input-group">
+                @Html.TextBoxFor(x => x.Nombre, new { @placeholder = "Nombre", @class = "form-control" })
+            </div>
+            @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+        </div>
+        @Html.Label("Apellido", new { @class = "control-label col-md-2", @id = "colorNaranja" })
+        <div class="col-md-10">
+            <div class="input-group">
+                @Html.TextBoxFor(x => x.Apellido, new { @placeholder = "Apellido", @class = "form-control" })
+            </div>
+            @Html.ValidationMessageFor(model => model.Apellido, "", new { @class = "text-danger" })
+        </div>
+        @Html.Label("Nombre Web", new { @class = "control-label col-md-2", @id = "colorNaranja" })
+        <div class="col-md-10">
+            <div class="input-group">
+                @Html.TextBoxFor(x => x.NombreWeb, new { @placeholder = "Nombre Web", @class = "form-control" })
+            </div>
+            @Html.ValidationMessageFor(model => model.NombreWeb, "", new { @class = "text-danger" })
+        </div>
+        @Html.Label("Documento", new { @class = "control-label col-md-2", @id = "colorNaranja" })
+        <div class="col-md-10">
+            <div class="input-group">
+                @Html.TextBoxFor(x => x.Documento, new { @placeholder = "Documento", @class = "form-control" })
+            </div>
+            @Html.ValidationMessageFor(model => model.Documento, "", new { @class = "text-danger" })
+        </div>
+        @Html.Label("Email", new { @class = "control-label col-md-2", @id = "colorNaranja" })
+        <div class="col-md-10">
+            <div class="input-group">
+                @Html.TextBoxFor(x => x.Email, new { @placeholder = "Email", @class = "form-control", type = "email" })
+            </div>
+            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+        </div>
+        @Html.Label("Telefono", new { @class = "control-label col-md-2", @id = "colorNaranja" })
+        <div class="col-md-10">
+            <div class="input-group">
+                @Html.TextBoxFor(x => x.Telefono, new { @placeholder = "Telefono", @class = "form-control" })
+            </div>
+            @Html.ValidationMessageFor(model => model.Telefono, "", new { @class = "text-danger" })
+        </div>
+        @Html.Label("Fecha Nacimiento", new { @class = "control-label col-md-2", @id = "colorNaranja" })
+        <div class="col-md-10">
+            <div class="input-group">
+                @Html.TextBoxFor(x => x.FechaNacimiento, new { @placeholder = "dd/mm/yyyy", @class = "form-control" })
+            </div>
+            @Html.ValidationMessageFor(model => model.FechaNacimiento, "", new { @class = "text-danger" })
+        </div>
+        @Html.Label("Rol", new { @class = "control-label col-md-2", @id = "colorNaranja" })
+        <div class="col-md-10">
+            <div class="input-group">
+                @Html.DropDownListFor(x => x.RolId, (SelectList)ViewBag.ListadoRoles, "--Selecciona Rol--", new { @class = "form-control" })
+            </div>
+            @Html.ValidationMessageFor(model => model.RolId, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="float-right">
+        <a href="@Url.Action("Index","Usuario")" class="btn btn-danger">Volver</a>
+        <button type="submit" class="btn btn-primary">Aceptar</button>
+    </div>
+</div>}

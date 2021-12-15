@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<logger>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogOut</Controller>
+    <Date>15/12/2021 11:49:47</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 11:52:47</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogOut</Controller>
+    <Date>15/12/2021 12:14:18</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 12:17:22</Date>
+    <IdMsj>luis@spinetta.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogOut</Controller>
+    <Date>15/12/2021 12:19:48</Date>
+    <IdMsj>luis@spinetta.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 12:19:51</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogOut</Controller>
+    <Date>15/12/2021 12:21:13</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>BizChange</Severity>
+    <Controller>StartRecovery</Controller>
+    <Date>15/12/2021 13:29:12</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 13:29:29</Date>
+    <IdMsj>luis@spinetta.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogOut</Controller>
+    <Date>15/12/2021 13:29:45</Date>
+    <IdMsj>luis@spinetta.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>BizChange</Severity>
+    <Controller>StartRecovery</Controller>
+    <Date>15/12/2021 13:30:06</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 13:30:33</Date>
+    <IdMsj>luis@spinetta.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 13:32:56</Date>
+    <IdMsj>luis@spinetta.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogOut</Controller>
+    <Date>15/12/2021 13:33:06</Date>
+    <IdMsj>luis@spinetta.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>BizChange</Severity>
+    <Controller>StartRecovery</Controller>
+    <Date>15/12/2021 13:34:38</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>BizChange</Severity>
+    <Controller>StartRecovery</Controller>
+    <Date>15/12/2021 13:35:28</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 13:35:37</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 14:08:28</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 14:16:17</Date>
+    <IdMsj>luis@spinetta.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogOut</Controller>
+    <Date>15/12/2021 14:16:24</Date>
+    <IdMsj>luis@spinetta.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 14:16:28</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 14:22:43</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 14:32:16</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 14:55:06</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogOut</Controller>
+    <Date>15/12/2021 14:55:12</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 15:00:17</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogOut</Controller>
+    <Date>15/12/2021 15:01:07</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 16:58:06</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 16:59:30</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 17:03:08</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogOut</Controller>
+    <Date>15/12/2021 17:04:30</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 17:04:33</Date>
+    <IdMsj>luis@spinetta.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 17:08:23</Date>
+    <IdMsj>luis@spinetta.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogOut</Controller>
+    <Date>15/12/2021 17:08:25</Date>
+    <IdMsj>luis@spinetta.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 17:08:29</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 17:14:50</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 17:16:21</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 17:18:39</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 17:20:20</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>BizChange</Severity>
+    <Controller>StartRecovery</Controller>
+    <Date>15/12/2021 17:23:24</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 17:23:32</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 17:31:52</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 17:39:23</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 17:43:27</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 17:46:58</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 17:48:36</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 17:52:03</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 18:04:12</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 18:06:19</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 18:16:13</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+  <Log>
+    <Severity>Info</Severity>
+    <Controller>LogIn</Controller>
+    <Date>15/12/2021 18:17:23</Date>
+    <IdMsj>julianlastra@yahoo.com</IdMsj>
+  </Log>
+</logger>

@@ -1,0 +1,41 @@
+﻿@model IEnumerable<MKT.Entities.Models.Cart>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuario.NombreWeb)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Creado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Modificado)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuario.NombreWeb)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Creado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Modificado)
+        </td>
+        <td>
+            <a href="@Url.Action("IndexAdmin", "CartItem", new { id = item.Id })">Ver Compra</a>
+        </td>
+    </tr>
+}
+
+</table>

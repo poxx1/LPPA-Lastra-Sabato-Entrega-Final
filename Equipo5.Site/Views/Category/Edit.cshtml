@@ -1,0 +1,27 @@
+﻿@model MKT.Entities.Models.Category
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="text-center">Actualizar Categoria</h2>
+
+@using (Html.BeginForm("Edit", "Category"))
+{
+    <div class="form-horizontal">
+        <hr />
+        <div class="form-group">
+            @Html.Label("Nombre", new { @class = "control-label col-md-2", @id = "colorNaranja" })
+            <div class="col-md-10">
+                <div class="input-group">
+                    @Html.TextBoxFor(model => model.Nombre, new { @placeholder = "Nombre", @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(model => model.Nombre)
+            </div>
+        </div>
+        <div class="float-right">
+            <a href="@Url.Action("Index","Category")" class="btn btn-danger">Volver</a>
+            <button type="submit" class="btn btn-primary">Aceptar</button>
+        </div>
+    </div>
+}

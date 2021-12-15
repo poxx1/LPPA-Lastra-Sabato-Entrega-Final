@@ -1,0 +1,65 @@
+﻿@{ ViewBag.Title = "AltaCategoria"; }
+
+<h2>Gestion de Categorias</h2>
+<hr />
+<div>
+
+    <form autocomplete="off">
+        <fieldset>
+            <legend>Formulario</legend>
+            <div class="form-group row">
+                <label for="nombre">Nombre</label>
+                <div>
+                    <input type="text" class="form-control" id="nombre" value="" placeholder="Ingrese nombre de la categoria">
+                </div>
+            </div>
+
+
+
+            <button type="button" id="btnSave" onclick="save();">Grabar</button>
+            <button type="button" id="btnList" onclick="listCategory();">Listar Categorias</button>
+        </fieldset>
+    </form>
+</div>
+<hr />
+<div id="listaCategorias">
+
+</div>
+
+@section scripts{
+    <script>var categorias = new Array();
+        function Category() {
+            this.setNombre = function (value) {
+                this._nombre = value;
+            }
+            this.getNombre = function () {
+                return this._nombre;
+            }
+        }
+        // Eventos de los botones
+        function save() {
+            var c = new Category();
+            var nombre = document.getElementById("nombre").value;
+            c.setNombre(nombre);
+
+            // Guardo constelación en el array
+            categorias.push(c);
+            // Limpio input
+
+            document.getElementById("nombre").value = "";
+
+        }
+        function listCategory() {
+            var divResultado = document.getElementById("listaCategorias");
+            divResultado.innerHTML = "";
+            if (categorias.length == 0) {
+                divResultado.innerHTML = "No hay categorias cargadas.";
+                return;
+            }
+            for (let i = 0; i < categorias.length; i++) {
+                let c = categorias[i];
+                divResultado.innerHTML += "Nombre: " + c.getNombre() +"<br />";
+            }
+        }</script>
+
+}
